@@ -11,7 +11,14 @@ import Foundation
 class AppPreferencePanes {
     static let shared = AppPreferencePanes()
     
-    var lang = "ru"
+    var lang: String {
+        get {
+            UserDefaults.standard.string(forKey: "lang") ?? "ru"
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "lang")
+        }
+    }
     
     private init() {
         

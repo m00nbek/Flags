@@ -38,10 +38,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
-    @objc func showMenu() {
-        
-    }
-    
     @objc public func dismissKeyboard() {
         view.endEditing(true)
     }
