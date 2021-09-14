@@ -8,8 +8,14 @@
 import UIKit
 
 class MainPageController: UIPageViewController, ViewInstaller {
+    
+    var quizzes = [
+        Quiz(flagAnswer: .Andorra, flags: [.Andorra: UIImage(), .Andorra: UIImage()]),
+        Quiz(flagAnswer: .Andorra, flags: [.Andorra: UIImage()]),
+        Quiz(flagAnswer: .Andorra, flags: [.Andorra: UIImage()]),
+    ]
+    
     func setupSubviews() {
-        
     }
     
     func setupConstraints() {
@@ -17,7 +23,7 @@ class MainPageController: UIPageViewController, ViewInstaller {
     }
     
     func setupTargets() {
-        
+        dataSource = self
     }
     
     func style() {
@@ -28,5 +34,21 @@ class MainPageController: UIPageViewController, ViewInstaller {
         
     }
     
+    
+}
+extension MainPageController: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        let newQuizVC = QuizController()
+        // get index from pageViewController
+        newQuizVC.quiz = quizzes[0]
+        return newQuizVC
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        let newQuizVC = QuizController()
+        // get index from pageViewController
+        newQuizVC.quiz = quizzes[0]
+        return newQuizVC
+    }
     
 }

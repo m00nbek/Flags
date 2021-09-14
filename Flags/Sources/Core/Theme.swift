@@ -53,6 +53,9 @@ struct Color {
     static let inputBackground = UIColor(hex: "F8F8F8")
     
     static let inputBorder = UIColor(hex: "EBEEF0")
+    
+    static let mainDarkColor = UIColor(hex: "1d262b")
+    static let mainLightColor = UIColor(hex: "343b41")
 }
 
 func styledText(_ text: String) -> NSMutableAttributedString {

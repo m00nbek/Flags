@@ -57,6 +57,10 @@
 		AB5A007326EFA99900A18BF8 /* FormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A006F26EFA99900A18BF8 /* FormRow.swift */; };
 		AB5A007426EFA99900A18BF8 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A007026EFA99900A18BF8 /* ScrollView.swift */; };
 		AB5A007626EFA9F100A18BF8 /* AppPreferencePanes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A007526EFA9F000A18BF8 /* AppPreferencePanes.swift */; };
+		AB5A007A26F06DD000A18BF8 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A007926F06DD000A18BF8 /* QuizView.swift */; };
+		AB5A007D26F070EC00A18BF8 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A007C26F070EC00A18BF8 /* Quiz.swift */; };
+		AB5A008026F09F6200A18BF8 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A007F26F09F6200A18BF8 /* QuizController.swift */; };
+		AB5A008226F0FD7C00A18BF8 /* FlagName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A008126F0FD7B00A18BF8 /* FlagName.swift */; };
 		ABCB5C0226EF8B370036A169 /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB5C0126EF8B370036A169 /* MainPageController.swift */; };
 		ABE0E5F625E22ABD00812517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE0E5F525E22ABD00812517 /* AppDelegate.swift */; };
 		ABE0E5F825E22ABD00812517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE0E5F725E22ABD00812517 /* SceneDelegate.swift */; };
@@ -114,6 +118,10 @@
 		AB5A006F26EFA99900A18BF8 /* FormRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRow.swift; sourceTree = "<group>"; };
 		AB5A007026EFA99900A18BF8 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		AB5A007526EFA9F000A18BF8 /* AppPreferencePanes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPreferencePanes.swift; sourceTree = "<group>"; };
+		AB5A007926F06DD000A18BF8 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		AB5A007C26F070EC00A18BF8 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		AB5A007F26F09F6200A18BF8 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		AB5A008126F0FD7B00A18BF8 /* FlagName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagName.swift; sourceTree = "<group>"; };
 		ABCB5C0126EF8B370036A169 /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		ABE0E5F225E22ABD00812517 /* Flags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE0E5F525E22ABD00812517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,8 +144,8 @@
 		AB1F066526E27BFB004CD5CC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AB5A006226EFA95600A18BF8 /* Core */,
 				AB5A000826EFA89100A18BF8 /* NYKit */,
+				AB5A006226EFA95600A18BF8 /* Core */,
 				AB1F066626E27C59004CD5CC /* Screens */,
 			);
 			path = Sources;
@@ -147,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				ABCB5C0126EF8B370036A169 /* MainPageController.swift */,
+				AB5A007E26F09F5400A18BF8 /* Quiz */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -226,10 +235,11 @@
 		AB5A006226EFA95600A18BF8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AB5A007526EFA9F000A18BF8 /* AppPreferencePanes.swift */,
-				AB5A006C26EFA99100A18BF8 /* Views */,
 				AB5A006A26EFA98A00A18BF8 /* Theme.swift */,
+				AB5A007526EFA9F000A18BF8 /* AppPreferencePanes.swift */,
 				AB5A006826EFA98400A18BF8 /* Extensions.swift */,
+				AB5A007B26F070DD00A18BF8 /* Models */,
+				AB5A006C26EFA99100A18BF8 /* Views */,
 				AB5A006726EFA96600A18BF8 /* Controllers */,
 			);
 			path = Core;
@@ -253,6 +263,24 @@
 				AB5A006D26EFA99900A18BF8 /* View.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AB5A007B26F070DD00A18BF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB5A007C26F070EC00A18BF8 /* Quiz.swift */,
+				AB5A008126F0FD7B00A18BF8 /* FlagName.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB5A007E26F09F5400A18BF8 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				AB5A007926F06DD000A18BF8 /* QuizView.swift */,
+				AB5A007F26F09F6200A18BF8 /* QuizController.swift */,
+			);
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 		ABE0E5E925E22ABD00812517 = {
@@ -379,7 +407,9 @@
 				AB5A001A26EFA8E000A18BF8 /* UICollectionView.swift in Sources */,
 				AB5A006526EFA96200A18BF8 /* NavigationController.swift in Sources */,
 				AB5A002026EFA8E000A18BF8 /* NYImageVIew.swift in Sources */,
+				AB5A008026F09F6200A18BF8 /* QuizController.swift in Sources */,
 				AB5A005126EFA93200A18BF8 /* IPV4Rule.swift in Sources */,
+				AB5A007A26F06DD000A18BF8 /* QuizView.swift in Sources */,
 				AB5A003126EFA92700A18BF8 /* ValidationError.swift in Sources */,
 				AB5A004B26EFA93200A18BF8 /* FullNameRule.swift in Sources */,
 				AB5A007326EFA99900A18BF8 /* FormRow.swift in Sources */,
@@ -393,6 +423,7 @@
 				AB5A003326EFA92700A18BF8 /* Validatable.swift in Sources */,
 				AB5A005826EFA93300A18BF8 /* PhoneNumberRule.swift in Sources */,
 				ABCB5C0226EF8B370036A169 /* MainPageController.swift in Sources */,
+				AB5A008226F0FD7C00A18BF8 /* FlagName.swift in Sources */,
 				AB5A004E26EFA93200A18BF8 /* CardExpiryMonthRule.swift in Sources */,
 				AB5A001926EFA8E000A18BF8 /* NYStackView.swift in Sources */,
 				AB5A005E26EFA93300A18BF8 /* AlphaRule.swift in Sources */,
@@ -401,6 +432,7 @@
 				AB5A001C26EFA8E000A18BF8 /* NYScrollView.swift in Sources */,
 				ABE0E5F625E22ABD00812517 /* AppDelegate.swift in Sources */,
 				AB5A006926EFA98500A18BF8 /* Extensions.swift in Sources */,
+				AB5A007D26F070EC00A18BF8 /* Quiz.swift in Sources */,
 				ABE0E5F825E22ABD00812517 /* SceneDelegate.swift in Sources */,
 				AB5A005A26EFA93300A18BF8 /* EmailRule.swift in Sources */,
 				AB5A005426EFA93300A18BF8 /* ISBNRule.swift in Sources */,
